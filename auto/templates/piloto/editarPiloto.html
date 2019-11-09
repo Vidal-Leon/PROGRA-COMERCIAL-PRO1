@@ -1,0 +1,31 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<form method="POST">{% csrf_token %}
+  {{formulario.as_p}}
+  <div style="margin-left:110px;">
+  <h3>Ingresar nuevo piloto</h3>
+  </div>
+  <div class="form-group"  style="margin-left:240px; margin-top:40px;">
+    <div class="form-group">
+      <div class="form-label-group">
+        <input type="text" id="inputText" class="form-control" placeholder="Text" required="required" name="nombre">
+        <label for="inputText">Ingrese nombre completo</label>
+      </div>
+  </div>
+    <div class="form-group">
+      <div class="form-label-group">
+        <input type="text" id="inputText" class="form-control" placeholder="Text" required="required" name="equipo">
+        <label for="inputText">Ingrese equipo</label>
+      </div>
+  </div>
+  <div class="form-group">
+    <div class="form-label-group">
+      <input type="text" id="inputText" class="form-control" placeholder="Text" required="required" name="vehiculo">
+      <label for="inputText">Ingrese vehiculo</label>
+    </div>
+  </div>
+    <button type="submit" class="btn btn-primary">Guardar</button>
+  </div>
+</form>
+{% endblock %}

@@ -10,4 +10,7 @@ urlpatterns = [
     url(r'^piloto/', views.ListaPiloto, name='ListaPiloto'),
     url(r'^registro/', views.ListaRegistro, name='ListaRegistro'),
     url(r'^nuevaCarrera/', views.NuevaCarrera, name='NuevaCarrera'),
+    url(r'^nuevoPiloto/', views.NuevoPiloto, name='NuevoPiloto'),
+    url(r'^nuevoRegistro/', views.NuevoRegistro, name='NuevoRegistro'),
+
 ]
