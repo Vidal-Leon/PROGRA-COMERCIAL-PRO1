@@ -1,0 +1,43 @@
+{% extends 'index.html' %}
+{% block content %}
+<div class="card mb-3">
+  <div class="card-header">
+    <i class="fas fa-table"></i>
+    Historial de pilotos</div>
+  <div class="card-body" style="text-align: center;">
+    <div class="table-responsive">
+      <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0" style="text-align:center;">
+        <thead>
+          <tr>
+            <th>Nombre Completo</th>
+            <th>Nombre de equipo</th>
+            <th>Vehiculo</th>
+          </tr>
+        </thead>
+        <tfoot>
+          <tr>
+            <th>Nombre Completo</th>
+            <th>Nombre de equipo</th>
+            <th>Vehiculo</th>
+          </tr>
+        </tfoot>
+        <tbody>
+          {% for a in piloto %}
+          <tr>
+            <td>{{a.nombre}}</td>
+            <td>{{a.equipo}}</td>
+            <td>{{a.vehiculo}}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+
+
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends 'index.html' %}
+{% block content %}
+<div class="card mb-3">
+  <div class="card-header">
+    <i class="fas fa-table"></i>
+    Historial de carreras</div>
+  <div class="card-body">
+    <div class="table-responsive" style="text-align: center;">
+      <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+        <thead>
+          <tr>
+            <th>Lugar</th>
+            <th>Fecha de Inicio</th>
+            <th>Fecha final</th>
+          </tr>
+        </thead>
+        <tfoot>
+          <tr>
+            <th>Lugar</th>
+            <th>Fecha de Inicio</th>
+            <th>Fecha final</th>
+          </tr>
+        </tfoot>
+        <tbody>
+          {% for a in carrera %}
+          <tr>
+            <td>{{a.lugar}}</td>
+            <td>{{a.fechainicio}}</td>
+            <td>{{a.fechafinal}}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+
+
+{% endblock %}

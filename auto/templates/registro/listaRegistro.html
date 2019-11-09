@@ -1,0 +1,39 @@
+{% extends 'index.html' %}
+{% block content %}
+<div class="card mb-3">
+  <div class="card-header">
+    <i class="fas fa-table"></i>
+    Historial de pilotos y carreras</div>
+  <div class="card-body">
+    <div class="table-responsive">
+      <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+        <thead>
+          <tr>
+            <th>Piloto</th>
+            <th>Posicion</th>
+            <th>Carrera</th>
+          </tr>
+        </thead>
+        <tfoot>
+          <tr>
+            <th>Piloto</th>
+            <th>Posicion</th>
+            <th>Carrera</th>
+          </tr>
+        </tfoot>
+        <tbody>
+          {% for a in registro %}
+          <tr>
+            <td>{{a.piloto}}</td>
+            <td>{{a.Posicion}}</td>
+            <td>{{a.carrera}}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+</div>
+</div>
+{% endblock %}
