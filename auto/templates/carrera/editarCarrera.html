@@ -1,0 +1,31 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<form method="POST">{% csrf_token %}
+  {{formulario.as_p}}
+  <div style="margin-left:110px;">
+  <h3>Ingresar nueva carrera</h3>
+  </div>
+  <div class="form-group"  style="margin-left:240px; margin-top:40px;">
+    <div class="form-group">
+      <div class="form-label-group">
+        <label for="inputEmail"></label>
+        <input type="text" id="inputEmail" class="form-control"placeholder="text" required="required" name="lugar">
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="form-label-group">
+        <input type="date" id="inputDate" class="form-control" placeholder="Date" required="required" name="fechainicio">
+        <label for="inputDate">Fecha de inicio</label>
+      </div>
+  </div>
+    <div class="form-group">
+      <div class="form-label-group">
+        <input type="date" id="inputDate" class="form-control" placeholder="Date" required="required" name="fechafinal">
+        <label for="inputDate">Fecha Final</label>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Guardar</button>
+  </div>
+</form>
+{% endblock %}
